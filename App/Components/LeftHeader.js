@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types';
-import { View, Text } from 'react-native'
+import { View, Text, TouchableHighlight } from 'react-native'
 import styles from './Styles/LeftHeaderStyle'
 
 // import library
@@ -21,8 +21,10 @@ export default class LeftHeader extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Icon name='bars' size={24} color='white' />
-        <Text style={styles.description}>Home</Text>
+        <TouchableHighlight onPress={this.props.onPress}>
+          <Icon name={this.props.icon} size={24} color={this.props.background === 'dark' ? 'white' : 'black'} />
+        </TouchableHighlight>
+        <Text style={styles.description}>{this.props.title}</Text>
       </View>
     )
   }

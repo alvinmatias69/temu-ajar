@@ -51,6 +51,7 @@ class HomeStudent extends Component {
           date="Kamis, 26 Oktober 2017"
           budget="20K - 50K"
           bidder={7}
+          onPress={() => this.props.navigation.navigate('StudentThread')}
         />
 
         <Card
@@ -59,6 +60,7 @@ class HomeStudent extends Component {
           date="Kamis, 26 Oktober 2017"
           budget="20K - 50K"
           bidder={21}
+          onPress={() => this.props.navigation.navigate('StudentThread')}
         />
 
         <View style={styles.heading}>
@@ -76,6 +78,7 @@ class HomeStudent extends Component {
           date="Rabu, 25 Oktober 2017"
           budget="20K - 50K"
           bidder={21}
+          onPress={() => this.props.navigation.navigate('StudentThread')}
         />
       </ScrollView>
     )
