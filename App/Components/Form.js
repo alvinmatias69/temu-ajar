@@ -34,6 +34,7 @@ export default class Form extends Component {
   render () {
     return (
       <TextInput
+	underlineColorAndroid="rgba(0,0,0,0)"
         style={[styles.form, this.state.stateBorder]}
         ref={this.props.label}
         placeholder={this.props.placeholder}

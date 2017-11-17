@@ -3,7 +3,7 @@ import { Colors, Metrics } from '../../Themes/'
 
 export default StyleSheet.create({
   form: {
-    height: Metrics.screenHeight*0.05,
+    //height: Metrics.screenHeight*0.05,
     marginBottom: Metrics.screenHeight*0.03
   },
   active: {
