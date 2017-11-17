@@ -9,7 +9,7 @@ export default StyleSheet.create({
     height: Metrics.screenHeight * 0.4,
     backgroundColor: '#FFF',
     paddingHorizontal: Metrics.screenWidth * 0.045,
-    paddingBottom: Metrics.screenHeight * 0.025
+    paddingVertical: Metrics.screenHeight * 0.025
   },
   badge: {
     backgroundColor: 'rgba(62, 130, 237, 0.2)',

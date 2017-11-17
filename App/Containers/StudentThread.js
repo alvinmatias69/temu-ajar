@@ -19,6 +19,7 @@ class StudentThread extends Component {
       name={item.name}
       star={item.star}
       price={item.price}
+      onPress={() => this.props.navigation.navigate('BidDetail')}
     />
   )
 

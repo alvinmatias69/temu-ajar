@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types';
-import { View, Text } from 'react-native'
+import { View, Text, TouchableHighlight } from 'react-native'
 import styles from './Styles/RatingCardStyle'
 
 import UserAvatar from 'react-native-user-avatar'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default class RatingCard extends Component {
   // // Prop type warnings
@@ -20,6 +20,8 @@ export default class RatingCard extends Component {
   constructor (props) {
     super(props)
 
+    console.log(props)
+
     let rate = []
 
     for (let i=0; i<props.star; i++) {
@@ -33,23 +35,25 @@ export default class RatingCard extends Component {
 
   render () {
     return (
-      <View style={styles.container}>
-        <View style={styles.avatar}>
-          <UserAvatar name={this.props.name[0]} size={40} />        
-        </View>
-        
-        <View style={styles.bidder}>
-          <Text style={styles.name}>{this.props.name}</Text>
-          <View style={styles.rate}>
-            {this.state.rate}
+      <TouchableHighlight onPress={this.props.onPress}>
+        <View style={styles.container}>
+          <View style={styles.avatar}>
+            <UserAvatar name={this.props.name[0]} size={40} />        
+          </View>
+          
+          <View style={styles.bidder}>
+            <Text style={styles.name}>{this.props.name}</Text>
+            <View style={styles.rate}>
+              {this.state.rate}
+            </View>
+          </View>
+
+          <View style={styles.price}>
+            <Text style={styles.priceTitle}>Bid Price</Text>
+            <Text style={styles.priceValue}>Rp {this.props.price}.000</Text>
           </View>
         </View>
-
-        <View style={styles.price}>
-          <Text style={styles.priceTitle}>Bid Price</Text>
-          <Text style={styles.priceValue}>Rp {this.props.price}.000</Text>
-        </View>
-      </View>
+      </TouchableHighlight>
     )
   }
 }

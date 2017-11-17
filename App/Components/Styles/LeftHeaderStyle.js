@@ -11,5 +11,10 @@ export default StyleSheet.create({
     fontSize: Fonts.size.h5,
     color: Colors.snow,
     marginLeft: Metrics.screenWidth * 0.09,
+  },
+  icon: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

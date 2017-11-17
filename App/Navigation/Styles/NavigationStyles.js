@@ -12,5 +12,6 @@ export default StyleSheet.create({
   headerBackOnly: {
     backgroundColor: Colors.snow,
     shadowColor: 'transparent',
+    borderWidth: 0
   }
 })

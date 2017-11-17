@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 // import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight } from 'react-native'
-import styles from './Styles/LeftHeaderStyle'
+import styles from './Styles/RightHeaderStyle'
 
-// import library
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-export default class LeftHeader extends Component {
+export default class RightHeader extends Component {
   // // Prop type warnings
   // static propTypes = {
   //   someProperty: PropTypes.object,
@@ -21,10 +20,9 @@ export default class LeftHeader extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <TouchableHighlight onPress={this.props.onPress} style={styles.icon}>
-          <Icon name={this.props.icon} size={26} color={this.props.background === 'dark' ? 'white' : 'black'} />
+        <TouchableHighlight onPress={this.props.onPress}>
+          <Icon name="notifications" color="#FFF" size={26} />
         </TouchableHighlight>
-        <Text style={styles.description}>{this.props.title}</Text>
       </View>
     )
   }

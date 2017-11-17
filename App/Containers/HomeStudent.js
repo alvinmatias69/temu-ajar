@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { 
   ScrollView, 
   Text,
-  View
+  View,
+  TouchableHighlight
 } from 'react-native'
 import { connect } from 'react-redux'
 // Add Actions - replace 'Your' with whatever your reducer is called :)
@@ -14,7 +15,7 @@ import Card from '../Components/Card'
 // Styles
 import styles from './Styles/HomeStudentStyle'
 
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 class HomeStudent extends Component {
   // constructor (props) {
@@ -25,16 +26,18 @@ class HomeStudent extends Component {
   render () {
     return (
       <ScrollView style={styles.container} contentContainerStyle={{paddingBottom: 20}}>
-        <View style={styles.card}>
-          <View style={styles.head}>
-            <Text style={styles.user}>Hello Mat</Text>
-            <Text style={styles.tagline}>Want to learn something?</Text>
-          </View>
+        <TouchableHighlight onPress={() => this.props.navigation.navigate('CreateThread')}>
+          <View style={styles.card}>
+            <View style={styles.head}>
+              <Text style={styles.user}>Hello Mat</Text>
+              <Text style={styles.tagline}>Want to learn something?</Text>
+            </View>
 
-          <View style={styles.arrow}>
-            <Icon name='arrow-right' size={16} color='#3e8aed' />
+            <View style={styles.arrow}>
+              <Icon name='arrow-forward' size={20} color='#3e8aed' />
+            </View>
           </View>
-        </View>
+        </TouchableHighlight>
 
         <View style={styles.heading}>
           <Text style={styles.sectionName}>

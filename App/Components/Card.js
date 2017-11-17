@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { View, Text, TouchableHighlight } from 'react-native'
 import styles from './Styles/CardStyle'
 
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default class Card extends Component {
   // Prop type warnings
@@ -28,7 +28,7 @@ export default class Card extends Component {
             </View>
 
             <View style={styles.more}>
-              <Icon name="ellipsis-h" size={16} color="#000" />
+              <Icon name="more-horiz" size={16} color="#000" />
             </View>
           </View>
 

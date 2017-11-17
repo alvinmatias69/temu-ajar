@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { View, Text } from 'react-native'
 import styles from './Styles/ThreadDescriptionStyle'
 
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default class ThreadDescription extends Component {
   // // Prop type warnings
@@ -24,7 +24,7 @@ export default class ThreadDescription extends Component {
       bidder = (
         <View>
           <View style={styles.icon}>
-            <Icon name="user" color="#000" size={18}/>
+            <Icon name="person" color="#000" size={18}/>
           </View>
           <View style={styles.vertical}>
             <Text style={styles.subtitle}>Bidder</Text>
@@ -48,19 +48,19 @@ export default class ThreadDescription extends Component {
         <Text style={styles.description}>{this.props.description}</Text>
         <View style={styles.horizontal}>
           <View style={styles.icon}>
-            <Icon name="calendar" color="#000" size={18}/>
+            <Icon name="insert-invitation" color="#000" size={18}/>
           </View>
           <Text style={styles.descriptionText}>{this.props.date}</Text>
         </View>
         <View style={styles.horizontal}>
           <View style={styles.icon}>
-            <Icon name="map-marker" color="#000" size={18}/>
+            <Icon name="location-on" color="#000" size={18}/>
           </View>
           <Text style={styles.descriptionText}>{this.props.location}</Text>
         </View>
         <View style={styles.horizontal}>
           <View style={styles.icon}>
-            <Icon name="usd" color="#000" size={18}/>
+            <Icon name="attach-money" color="#000" size={18}/>
           </View>
           <View style={styles.vertical}>
             <Text style={styles.subtitle}>Budget Range</Text>
